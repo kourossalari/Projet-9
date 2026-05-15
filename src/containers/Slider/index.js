@@ -28,13 +28,11 @@ const Slider = () => {
   return () => {
     if (timer) clearTimeout(timer);
   };
-}, [data, byDateDesc.length]);
-
-  if (!data?.focus) return null;
-
+}, [data, byDateDesc.length, index]);;
 
   return (
     <div className="SlideCardList">
+
       {byDateDesc?.map((event, idx) => (
           <div
             key={event.title}

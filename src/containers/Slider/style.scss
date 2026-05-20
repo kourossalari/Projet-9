@@ -28,7 +28,7 @@
     &__paginationContainer {
       position: absolute;
       left: 0;
-      bottom: 60px;
+      bottom: 40px;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -48,6 +48,7 @@
       border-radius: 8px;
       display: flex;
       font-family: "Space Grotesk", sans-serif;
+    
       h3 {
         width: 45%;
         border-right: 1px solid #4314ff;
@@ -77,6 +78,21 @@
     }
   }
 }
+
+.SlideCard__pagination {
+      gap: 20px;
+      display: flex;
+      padding: 20px;
+      width: 50%;
+      justify-content: center;
+      .slideLabel{
+        padding: 5px;
+        border: none;
+        border-radius: 25px;
+        background: white;
+        color: black;
+      }
+      }
 
 @keyframes slide {
   0% {

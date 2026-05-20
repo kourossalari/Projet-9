@@ -10,7 +10,7 @@ const Slider = () => {
 
   const byDateDesc = data?.focus
     ? [...data.focus].sort((a, b) =>
-        new Date(a.date) > new Date(b.date) ? -1 : 1
+        new Date(a.date) < new Date(b.date) ? -1 : 1
       )
     : [];
 
@@ -54,13 +54,19 @@ const Slider = () => {
       <div className="SlideCard__paginationContainer">
             <div className="SlideCard__pagination">
               {byDateDesc.map((event, idx) => (
+              <label className="slideLabel"
+              key={event.title}
+              htmlFor={event.id}
+              >
+                <span> Slide {idx+1}</span>
                 <input
-                  key={event.title}
+                  id={event.id}
                   type="radio"
                   name="radio-button"
                   checked={index === idx}
                   onChange={() => setIndex(idx)}
                 />
+                </label>
               ))}
             </div>
           </div>

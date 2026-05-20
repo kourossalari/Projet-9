@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 
 const Icon = ({ name }) => {
   let icon;
+  const labels = {
+    twitter: "Twitter",
+    facebook: "Facebook",
+    twitch: "Twitch",
+    youtube: "YouTube"
+  }
   switch (name) {
     case "twitch":
       icon = (
@@ -89,10 +95,12 @@ const Icon = ({ name }) => {
       width="36"
       height="36"
       viewBox="0 0 36 36"
+      aria-label={labels[name]}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       {icon}
+      <title>{labels[name]}</title>
     </svg>
   );
 };
